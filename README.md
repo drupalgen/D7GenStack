@@ -21,14 +21,13 @@ A combination of the shell provisioner and Puppet is used to provision the box, 
 * Apache2
   * mod-rewrite
   * Local host created with the server name of "d7gen.local.com", pointed at port 80.  You can set up an entry in your local hosts file pointing d7gen.local.com to 192.168.200.100 to see the drupal installation in your browser.
-* mysql
-*   Drupal database "drupal", with user/password of 
+* mysql (server and client) (NOTE:  THIS IS UNSECURED, WITH NO PASSWORD ON THE ROOT USER)
+*   Drupal database "drupal", with user/password of "drupaluser/1drupaluser"
 * php5
   * php5-gd
   * php5-curl
   * php-pear
   * php5-mcrypt
   * php5-memcache (installed for now, may do something with it later)
-  * 
   * 
 
