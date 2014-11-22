@@ -20,7 +20,7 @@ A combination of the shell provisioner and Puppet is used to provision the box, 
   * puppetlabs-mysql
 * Apache2
   * mod-rewrite
-  * Local host created with the name of "http://d7gen.local.com", pointed at port 80.  You can set up an entry in your local hosts file pointing d7gen.local.com to 192.168.200.100 to see the drupal installation in your local browser.
+  * Local host created with the server name of "d7gen.local.com", pointed at port 80.  You can set up an entry in your local hosts file pointing d7gen.local.com to 192.168.200.100 to see the drupal installation in your browser.
 * mysql
 *   Drupal database "drupal", with user/password of 
 * php5
