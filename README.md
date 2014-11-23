@@ -14,10 +14,6 @@ A combination of the shell provisioner and Puppet is used to provision the box, 
 * curl
 * vim
 * puppet
-* Puppet modules:
-  * puppetlabs/apache
-  * example42-php
-  * puppetlabs-mysql
 * Apache2
   * mod-rewrite
   * Local host created with the server name of "d7gen.local.com", pointed at port 80.  You can set up an entry in your local hosts file pointing d7gen.local.com to 192.168.200.100 to see the drupal installation in your browser.
@@ -29,5 +25,29 @@ A combination of the shell provisioner and Puppet is used to provision the box, 
   * php-pear
   * php5-mcrypt
   * php5-memcache (installed for now, may do something with it later)
-  * 
+* Composer
+* Drush
+* Drupal Core with a drush install
+  * superuser admin:admin 
+
+To start, clone this repository, go into the root of the clone, and run "vagrant up".
+
+Once vagrant has completed, cd drupal/public_html/sites/all/modules and run:
+
+  git clone git@github.com:lhridley/DrupalGen-7.git custom
+
+This will clone the DrupalGen project into the sites/all/modules/custom directory of the Drupal install.
+
+All commits to the DrupalGen project should be done from inside that directory.
+
+All commits to the Vagrant profile should be done here.
+
+To save and restart your VirtualBox, run:
+
+  vagrant suspend
+
+  vagrant resume
+
+If you reprovision, you will destroy the Drupal installation and create a new one.
+
 
