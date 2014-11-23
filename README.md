@@ -30,6 +30,8 @@ A combination of the shell provisioner and Puppet is used to provision the box, 
 * Drupal Core with a drush install
   * superuser admin:admin 
 
+Getting Started
+===============
 To start, clone this repository, go into the root of the clone, and run "vagrant up".
 
 Once vagrant has completed, cd drupal/public_html/sites/all/modules and run:
@@ -38,6 +40,8 @@ Once vagrant has completed, cd drupal/public_html/sites/all/modules and run:
 
 This will clone the DrupalGen project into the sites/all/modules/custom directory of the Drupal install.
 
+Notes
+=====
 All commits to the DrupalGen project should be done from inside that directory.
 
 All commits to the Vagrant profile should be done here.
