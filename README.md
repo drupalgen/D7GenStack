@@ -28,7 +28,7 @@ A combination of the shell provisioner and Puppet is used to provision the box, 
 * Composer
 * Drush
 * Drupal Core with a drush install
-  * superuser admin:admin 
+  * superuser admin/admin 
 
 Getting Started
 ===============
@@ -53,5 +53,3 @@ To save and restart your VirtualBox, run:
   vagrant resume
 
 If you reprovision, you will destroy the Drupal installation and create a new one.
-
-
