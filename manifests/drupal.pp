@@ -66,15 +66,15 @@ exec {'change-apache-lockfile-to-vagrant':
   ],
 }
 
-exec {'remove-public_html':
-  command => '/usr/bin/sudo /bin/rm -Rf /vagrant/drupal/public_html',
+exec {'make-drupal-root':
+  command => '/bin/mkdir -p /vagrant/drupal',
   require => Exec['stop-apache'],
 }
 
 exec {'download-drupal':
   command => '/usr/local/bin/drush dl --drupal-project-rename=public_html',
   cwd => '/vagrant/drupal',
-  require => Exec['remove-public_html'],
+  require => Exec['make-drupal-root'],
 }
 
 exec {'install-drupal':
@@ -90,7 +90,7 @@ exec {'restart-apache':
 }
 
 exec {'create-module-folders':
-  command => '/bin/mkdir /vagrant/drupal/public_html/sites/all/modules/contrib',
+  command => '/bin/mkdir -p /vagrant/drupal/public_html/sites/all/modules/contrib',
   require => Exec['restart-apache'],
 }
 
